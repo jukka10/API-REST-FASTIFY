@@ -11,7 +11,7 @@ const envSchema = z.object({
 const { success, data, error } = envSchema.safeParse(process.env);
 
 if (success === false) {
-  console.log("[!!!]  Invalid enviroment variables!", error.format());
+  console.log("[!!!]  Invalid enviroment variables!", z.treeifyError(error));
 
   throw new Error("[!!!]  Invalid enviroment variables!");
 }

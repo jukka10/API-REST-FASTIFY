@@ -1,13 +1,11 @@
 import fastify from "fastify";
-import { knex } from "./database";
 import { env } from "./env/index";
+
+import { transactionsRoutes } from "./routes/transactions";
 
 const app = fastify();
 
-app.get("/", async () => {
-  const transaction = await knex("transactions").select("*");
-  return transaction;
-});
+app.register(transactionsRoutes, { prefix: "transactions" });
 
 app.listen({ port: env.PORT }).then(() => {
   console.log("hellow my opa");
