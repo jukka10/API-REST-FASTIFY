@@ -10,8 +10,8 @@ Requisitos da Aplicação
 #RN - Regra de Negocios
 
 - [x] A transação pode ser do tipo credito que somara, ou débito que subtrairá;
-- [] Deve sr possivel identificarmos o usuario entre as requisições;
-- [] O usuario só pode visuzilar transações que ele criou;
+- [x] Deve sr possivel identificarmos o usuario entre as requisições;
+- [x] O usuario só pode visuzilar transações que ele criou;
 
 #RNF - Requisitos não Funcionais
 
