@@ -1,7 +1,7 @@
 import z from "zod";
-import { knex } from "../database";
-import { FastifyInstance } from "fastify";
 import { randomUUID } from "node:crypto";
+import { FastifyInstance } from "fastify";
+import { knex } from "../database";
 
 export async function transactionsRoutes(app: FastifyInstance) {
   app.post("/", async (req, res) => {
