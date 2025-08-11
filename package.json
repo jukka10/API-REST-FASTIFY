@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "knex": "node --no-warnings --import tsx ./node_modules/knex/bin/cli.js",
+    "knex": "tsx ./node_modules/knex/bin/cli.js",
     "build": "tsup src --out-dir build",
     "test": "vitest"
   },
@@ -16,6 +16,15 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "dotenv": "^17.2.1",
+    "fastify": "^5.4.0",
+    "knex": "^3.1.0",
+    "pg": "^8.16.3",
+    "zod": "^4.0.14"
+  },
+
   "devDependencies": {
     "@types/node": "^24.1.0",
     "@types/supertest": "^6.0.3",
@@ -23,15 +32,7 @@
     "tsup": "^8.5.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "vitest": "^3.2.4"
-  },
-  "dependencies": {
-    "@fastify/cookie": "^11.0.2",
-    "dotenv": "^17.2.1",
-    "fastify": "^5.4.0",
-    "knex": "^3.1.0",
-    "pg": "^8.16.3",
     "sqlite3": "^5.1.7",
-    "zod": "^4.0.14"
+    "vitest": "^3.2.4"
   }
 }
