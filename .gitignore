@@ -1,4 +1,4 @@
 node_modules
-src/temp/app.db
+temp/*.db
 .env
 .env.test
